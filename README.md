@@ -1,18 +1,61 @@
-# React + Vite
+# Crypto Assets Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal React + Vite single-page application that fetches live cryptocurrency market data from the CoinGecko public API and displays asset name, symbol, and current USD price.
 
-Currently, two official plugins are available:
+The implementation prioritizes clean code, separation of concerns, and reliable data handling over visual styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Fetches live data from the CoinGecko API
+- Displays:
+  - Asset name
+  - Symbol
+  - Current price (USD)
+- Loading state during data fetch
+- Friendly error handling
+- Client-side search by asset name
+- Simple, maintainable component architecture
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- TailwindCSS
+- Fetch API
+- Functional components and React hooks
+
+---
+
+ ## Project Structure
+```
+src/
+├── api/          # API calls
+├── hooks/        # Data lifecycle and state management
+├── components/   # Reusable UI components
+├── pages/        # Page composition
+└── utils/        # Helpers and formatters
+```
+
+## Installation
+
+```bash
+npm install
+npm run dev
+
+
+Production Build
+npm run build
+npm run preview
+
+Deployment
+Designed for static hosting platforms such as:
+Netlify
+
+
+Netlify settings
+Build command: npm run build
+Publish directory: dist
+
